@@ -16,8 +16,8 @@ module Openweather2
       @clouds = json['clouds']['all']
       @wind_speed = json['wind']['speed']
       @wind_angle = json['wind']['deg']
-      @icon = if json['weather'] &&  json['weather'][0]
-                @icon = json['weather'][0]['icon']
+      @icon = if json['weather'] && json['weather'][0]
+                json['weather'][0]['icon']
               end
     end
   end
